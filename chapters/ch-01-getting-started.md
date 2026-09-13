@@ -4,8 +4,9 @@ title: Getting started
 
 # Getting started
 
-Organize each chapter as a Markdown file in `content/`. Add it to the `toc` in
-`myst.yml`, and MyST will include it in the book navigation.
+Organize each chapter as a Markdown file in `chapters/` using the
+`ch-NN-slug.md` naming pattern. Add it to the `toc` in `myst.yml`, and MyST will
+include it in the book navigation.
 
 ## Write with MyST
 

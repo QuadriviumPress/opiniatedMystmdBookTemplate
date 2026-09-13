@@ -8,7 +8,7 @@ Welcome to your new interactive book. Replace this page with a short invitation
 that tells readers what they will learn and how the book is organized.
 
 :::{tip} Start writing
-Edit the files in `content/`, then run `npm run start` to preview changes.
+Edit the files in `chapters/`, then run `npm run start` to preview changes.
 :::
 
 ## What is included
@@ -18,4 +18,4 @@ Edit the files in `content/`, then run `npm run start` to preview changes.
 - Pull-request validation and automatic GitHub Pages deployment
 - A generated web app manifest and offline caching
 
-Continue with [Getting started](01-getting-started.md).
+Continue with [Getting started](chapters/ch-01-getting-started.md).

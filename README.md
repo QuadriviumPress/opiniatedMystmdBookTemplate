@@ -6,7 +6,7 @@ make authoring, testing, and deployment predictable from the first commit.
 
 ## Features
 
-- Ready-to-use `content/`, `img/`, `css/`, and `scripts/` structure
+- Ready-to-use `chapters/`, `images/`, `css/`, and `scripts/` structure
 - MyST book configuration with sensible metadata and navigation defaults
 - Reproducible Node 22 toolchain with `mystmd` pinned to `1.10.1`
 - Pull-request CI that validates and builds the complete site
@@ -59,8 +59,9 @@ Use `npm ci` in CI and whenever you want an exact install from the lockfile.
 | Path | Purpose |
 | --- | --- |
 | `myst.yml` | Book metadata, table of contents, and theme configuration |
-| `content/` | Main book content in MyST Markdown |
-| `img/` | Logos, figures, and other source images |
+| `index.md` | Landing / front page |
+| `chapters/` | Main book content in MyST Markdown (`ch-NN-slug.md`) |
+| `images/` | Logos, figures, and other source images |
 | `css/` | Book-specific styles |
 | `scripts/` | Validation and post-build PWA tooling |
 | `pwa/` | Offline fallback and service worker source |
@@ -69,7 +70,7 @@ Use `npm ci` in CI and whenever you want an exact install from the lockfile.
 
 ## Opinionated conventions
 
-- Keep content under `content/` and explicitly list reading order in `myst.yml`.
+- Keep chapters under `chapters/` as `ch-NN-slug.md` and list reading order in `myst.yml`.
 - Commit `package-lock.json`; use local npm scripts instead of a global MyST install.
 - Treat warnings and build failures as changes to resolve before merging.
 - Give figures useful filenames and accessible alternative text.

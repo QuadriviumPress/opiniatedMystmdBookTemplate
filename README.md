@@ -29,9 +29,12 @@ make authoring, testing, and deployment predictable from the first commit.
    ```
 
 4. Replace the placeholder title, author, description, and `github` value in
-   `myst.yml`.
-5. Replace the sample pages and add every new page to `project.toc`.
-6. In **Settings → Pages**, choose **GitHub Actions** as the source.
+   `myst.yml`. Update `site.nav` so Sources points at your repo’s `SOURCES.md`.
+5. Fill in [`SOURCES.md`](SOURCES.md) with attribution for the source work.
+6. Replace the sample pages and add every new page to `project.toc`.
+7. Swap `images/logo.svg`, `images/logo-dark.svg`, and `images/favicon.svg` for
+   your branding.
+8. In **Settings → Pages**, choose **GitHub Actions** as the source.
 
 No `gh-pages` branch is needed: the deployment workflow publishes the generated
 `_build/html` artifact directly through GitHub Pages.
@@ -60,8 +63,9 @@ Use `npm ci` in CI and whenever you want an exact install from the lockfile.
 | --- | --- |
 | `myst.yml` | Book metadata, table of contents, and theme configuration |
 | `index.md` | Landing / front page |
+| `SOURCES.md` | Attribution ledger for the source work and third-party media |
 | `chapters/` | Main book content in MyST Markdown (`ch-NN-slug.md`) |
-| `images/` | Logos, figures, and other source images |
+| `images/` | Logos, favicon, figures, and other source images |
 | `css/` | Book-specific styles |
 | `scripts/` | Validation and post-build PWA tooling |
 | `pwa/` | Offline fallback and service worker source |
@@ -71,6 +75,7 @@ Use `npm ci` in CI and whenever you want an exact install from the lockfile.
 ## Opinionated conventions
 
 - Keep chapters under `chapters/` as `ch-NN-slug.md` and list reading order in `myst.yml`.
+- Keep attribution current in `SOURCES.md` and linked from `site.nav`.
 - Commit `package-lock.json`; use local npm scripts instead of a global MyST install.
 - Treat warnings and build failures as changes to resolve before merging.
 - Give figures useful filenames and accessible alternative text.

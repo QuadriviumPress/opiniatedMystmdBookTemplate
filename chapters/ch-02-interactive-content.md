@@ -22,3 +22,21 @@ print(triangular_number(10))
 The deployed site is also a Progressive Web App. After a reader visits pages,
 the service worker retains them for offline reading. The offline screen covers
 pages that have not yet been cached.
+
+## Check the pattern
+
+Problems use an `{exercise}` directive. The worked answer is a `{solution}`
+dropdown bound to that label.
+
+```{exercise}
+:label: ex:starter:triangular
+
+What is the tenth triangular number, using the function above?
+```
+
+```{solution} ex:starter:triangular
+:label: sol:starter:triangular
+:class: dropdown
+
+`triangular_number(10)` is 55.
+```

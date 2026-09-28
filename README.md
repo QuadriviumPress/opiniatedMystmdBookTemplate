@@ -8,7 +8,7 @@ make authoring, testing, and deployment predictable from the first commit.
 
 - Ready-to-use `chapters/`, `images/`, `css/`, and `scripts/` structure
 - MyST book configuration with sensible metadata and navigation defaults
-- Reproducible Node 22 toolchain with `mystmd` pinned to `1.10.1`
+- Reproducible Node 22 toolchain with `mystmd` pinned to `1.11.0`
 - Pull-request CI that validates and builds the complete site
 - Automatic GitHub Pages deployment on every push to `main`
 - Progressive Web App manifest, installable icons, standalone reading mode,
@@ -46,6 +46,7 @@ npm install
 npm run start
 npm run verify
 npm run build
+npm run check
 ```
 
 The production site is written to `_build/html`. Set `BASE_URL` when testing a
@@ -68,13 +69,16 @@ Use `npm ci` in CI and whenever you want an exact install from the lockfile.
 | `images/` | Logos, favicon, figures, and other source images |
 | `css/` | Book-specific styles |
 | `scripts/` | Validation and post-build PWA tooling |
+| `AGENTS.md` | Commands and any intentional differences from the QuadriviumPress MyST baseline |
 | `pwa/` | Offline fallback and service worker source |
 | `.github/workflows/ci.yml` | Pull-request validation and build |
 | `.github/workflows/deploy.yml` | Build and GitHub Pages deployment |
 
 ## Opinionated conventions
 
+- Follow the [QuadriviumPress MyST baseline](https://github.com/QuadriviumPress/bindery/blob/main/doc/myst-baseline.md). This repository is the starter copy. Record any extra script in `AGENTS.md`.
 - Keep chapters under `chapters/` as `ch-NN-slug.md` and list reading order in `myst.yml`.
+- Mark problems with `{exercise}` and hide answers in a `{solution}` dropdown. Use `{note}`, `{important}`, `{tip}`, and `{warning}` for the roles in the [presentation skill](https://github.com/QuadriviumPress/bindery/blob/main/skills/quadrivium-myst-presentation/SKILL.md).
 - Keep attribution current in `SOURCES.md` and linked from `site.nav`.
 - Commit `package-lock.json`; use local npm scripts instead of a global MyST install.
 - Treat warnings and build failures as changes to resolve before merging.

@@ -8,7 +8,7 @@ make authoring, testing, and deployment predictable from the first commit.
 
 - Ready-to-use `chapters/`, `images/`, `css/`, and `scripts/` structure
 - MyST book configuration with sensible metadata and navigation defaults
-- Reproducible Node 22 toolchain with `mystmd` pinned to `1.11.0`
+- Reproducible Node 26 toolchain with `mystmd` pinned to `1.11.0`
 - Pull-request CI that validates and builds the complete site
 - Automatic GitHub Pages deployment on every push to `main`
 - Progressive Web App manifest, installable icons, standalone reading mode,
